@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5e5sxretygnx"]
+
+[ext_resource type="Script" path="res://LP4-1.gd" id="1_tu4n7"]
+
+[node name="LP4-1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tu4n7")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 127.0
+offset_bottom = 124.0
+scale = Vector2(3.91683, 2.11505)
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 16.0
+offset_right = 175.0
+offset_bottom = 76.0
+scale = Vector2(0.945652, 0.9)
+text = "# of copies"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 16.0
+offset_right = 259.063
+offset_bottom = 47.0
+scale = Vector2(1.45161, 1.5)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 192.0
+offset_right = 261.0
+offset_bottom = 223.0
+scale = Vector2(1.75393, 2.07026)
+text = "Clear"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_top = 192.0
+offset_right = 93.0
+offset_bottom = 223.0
+scale = Vector2(1.75393, 2.07026)
+text = "Calculate"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 192.0
+offset_right = 429.0
+offset_bottom = 223.0
+scale = Vector2(1.75393, 2.07026)
+text = "Exit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

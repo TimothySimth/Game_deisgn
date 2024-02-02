@@ -1,0 +1,94 @@
+[gd_scene load_steps=2 format=3 uid="uid://do0nwlubt7nsn"]
+
+[ext_resource type="Script" path="res://control.gd" id="1_qimyu"]
+
+[node name="prog_54c" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qimyu")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 292.0
+offset_right = 19.0
+offset_bottom = 300.0
+scale = Vector2(1.65941, 1.70586)
+text = "Caculate"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 253.0
+offset_top = 293.0
+offset_right = 328.0
+offset_bottom = 324.0
+scale = Vector2(1.65941, 1.70586)
+text = "Clear"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 530.0
+offset_top = 292.0
+offset_right = 605.0
+offset_bottom = 323.0
+scale = Vector2(1.65379, 1.78337)
+text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 39.0
+offset_right = 48.0
+offset_bottom = 62.0
+scale = Vector2(1.49289, 2.2)
+text = "Enter Radius"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 91.0
+offset_right = 109.0
+offset_bottom = 117.0
+scale = Vector2(1.49289, 2.2)
+text = "Area"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 145.0
+offset_right = 109.0
+offset_bottom = 171.0
+scale = Vector2(1.49289, 2.2)
+text = "Circumference"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 93.0
+offset_right = 278.0
+offset_bottom = 119.0
+scale = Vector2(1.49289, 2.2)
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 148.0
+offset_right = 288.0
+offset_bottom = 174.0
+scale = Vector2(1.52225, 2.2)
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 47.0
+offset_right = 239.062
+offset_bottom = 78.0
+scale = Vector2(2.44001, 1.3083)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
