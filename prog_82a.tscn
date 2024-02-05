@@ -1,0 +1,86 @@
+[gd_scene load_steps=2 format=3 uid="uid://cm0e5d360tekt"]
+
+[ext_resource type="Script" path="res://prog82a.gd" id="1_qv1m3"]
+
+[node name="prog82a" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qv1m3")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 16.0
+offset_right = 58.0
+offset_bottom = 39.0
+scale = Vector2(1.43355, 1.86667)
+text = "Enter speed limit:"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 69.0
+offset_right = 156.0
+offset_bottom = 95.0
+scale = Vector2(1.43355, 1.86667)
+text = "Enter vehicle speed:"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 128.0
+offset_right = 158.0
+offset_bottom = 154.0
+scale = Vector2(4.19842, 4.58182)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -0.999996
+offset_top = 263.0
+offset_right = 77.0
+offset_bottom = 294.0
+scale = Vector2(2.17054, 2.01739)
+text = "Calculate"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 260.0
+offset_right = 278.0
+offset_bottom = 291.0
+scale = Vector2(2.17054, 2.01739)
+text = "Clear"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 258.0
+offset_right = 484.0
+offset_bottom = 289.0
+scale = Vector2(2.17054, 2.01739)
+text = "Exit
+"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 231.0
+offset_top = 16.0
+offset_right = 298.063
+offset_bottom = 47.0
+scale = Vector2(3.57955, 1.51786)
+
+[node name="LineEdit2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 72.0
+offset_right = 317.063
+offset_bottom = 103.0
+scale = Vector2(3.57955, 1.51786)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

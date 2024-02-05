@@ -1,0 +1,127 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2ycow6c4nosu"]
+
+[ext_resource type="Script" path="res://prog76a.gd" id="1_q0x5m"]
+
+[node name="prog76a" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.898185, 0.860882)
+script = ExtResource("1_q0x5m")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 13.9999
+offset_top = 14.0
+offset_right = 95.9999
+offset_bottom = 40.0
+scale = Vector2(2.09863, 1.83071)
+text = "Enter num"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 210.424
+offset_top = 103.382
+offset_right = 250.424
+offset_bottom = 129.382
+scale = Vector2(4.20175, 1.9638)
+
+[node name="Label9" type="Label" parent="."]
+layout_mode = 0
+offset_left = 204.857
+offset_top = 55.7568
+offset_right = 244.857
+offset_bottom = 81.7568
+scale = Vector2(4.20175, 1.9638)
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 210.424
+offset_top = 157.978
+offset_right = 252.424
+offset_bottom = 183.978
+scale = Vector2(4.20175, 1.9638)
+text = "______"
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 210.424
+offset_top = 218.381
+offset_right = 252.424
+offset_bottom = 244.381
+scale = Vector2(4.20175, 1.9638)
+
+[node name="Label10" type="Label" parent="."]
+layout_mode = 0
+offset_left = 209.311
+offset_top = 307.824
+offset_right = 251.311
+offset_bottom = 333.824
+scale = Vector2(4.20175, 1.9638)
+text = "______"
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 0
+offset_left = 212.651
+offset_top = 272.976
+offset_right = 254.651
+offset_bottom = 298.976
+scale = Vector2(1.82878, 1.9638)
+
+[node name="Label7" type="Label" parent="."]
+layout_mode = 0
+offset_left = 221.558
+offset_top = 383.328
+offset_right = 263.558
+offset_bottom = 409.328
+scale = Vector2(1.69486, 1.72388)
+
+[node name="Label8" type="Label" parent="."]
+layout_mode = 0
+offset_left = 7.79348
+offset_top = 283.43
+offset_right = 49.7935
+offset_bottom = 309.43
+scale = Vector2(1.18893, 2.09754)
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 16.0
+offset_right = 269.063
+offset_bottom = 47.0
+scale = Vector2(2.67471, 1.36012)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 522.0
+offset_top = 2.0
+offset_right = 602.0
+offset_bottom = 33.0
+scale = Vector2(1.88846, 2.71273)
+text = "Calculate"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 522.0
+offset_top = 90.0
+offset_right = 602.0
+offset_bottom = 121.0
+scale = Vector2(1.88846, 2.71273)
+text = "Clear"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 522.0
+offset_top = 180.0
+offset_right = 602.0
+offset_bottom = 211.0
+scale = Vector2(1.88846, 2.71273)
+text = "Exit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
