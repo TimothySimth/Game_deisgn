@@ -6,7 +6,6 @@ func _on_button_pressed():
 		mysum += lcv
 		$ItemList.add_item(str(mysum))
 		lcv += 3
-	
 func _on_button_2_pressed():
 	$ItemList.clear()
 func _on_button_3_pressed():
