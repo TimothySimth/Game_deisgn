@@ -1,0 +1,97 @@
+[gd_scene load_steps=2 format=3 uid="uid://fmhx32xe77cc"]
+
+[ext_resource type="Script" path="res://calculater.gd" id="1_6vtp0"]
+
+[node name="calculater" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6vtp0")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 16.0
+offset_right = 392.0
+offset_bottom = 56.0
+text = "+"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 16.0
+offset_right = 456.0
+offset_bottom = 56.0
+text = "-"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 16.0
+offset_right = 520.0
+offset_bottom = 56.0
+text = "*"
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 56.0
+offset_right = 392.0
+offset_bottom = 96.0
+text = "**"
+
+[node name="Button5" type="Button" parent="."]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 56.0
+offset_right = 456.0
+offset_bottom = 96.0
+text = "/"
+
+[node name="Button6" type="Button" parent="."]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 56.0
+offset_right = 520.0
+offset_bottom = 96.0
+text = "Mod"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 136.0
+offset_top = 48.0
+offset_right = 200.0
+offset_bottom = 88.0
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 136.0
+offset_top = 120.0
+offset_right = 248.0
+offset_bottom = 160.0
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 16.0
+offset_right = 203.063
+offset_bottom = 47.0
+
+[node name="LineEdit2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 88.0
+offset_right = 203.063
+offset_bottom = 119.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Button6" to="." method="_on_button_6_pressed"]
