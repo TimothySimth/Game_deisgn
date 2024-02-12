@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=3 uid="uid://dn5vjami0mtk"]
+
+[ext_resource type="Script" path="res://prog52afonc.gd" id="1_se1po"]
+
+[node name="prog52afonc" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_se1po")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 15.0
+offset_right = 153.0
+offset_bottom = 41.0
+text = "Length:"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 47.0
+offset_right = 155.0
+offset_bottom = 73.0
+text = "Width:"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 90.0
+offset_right = 374.0
+offset_bottom = 168.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_top = 184.0
+offset_right = 135.0
+offset_bottom = 244.0
+text = "Calculate"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 184.0
+offset_right = 271.0
+offset_bottom = 244.0
+text = "Clear"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 184.0
+offset_right = 407.0
+offset_bottom = 244.0
+text = "Exit"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 13.0
+offset_right = 236.063
+offset_bottom = 44.0
+
+[node name="LineEdit2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 47.0
+offset_right = 235.063
+offset_bottom = 78.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
