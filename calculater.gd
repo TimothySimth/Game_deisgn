@@ -66,3 +66,14 @@ func _on_button_6_pressed():
 	var num3 = myMod(num1, num2)
 	$Label2.text = str(num3)
 
+
+
+func _on_button_7_pressed():
+	$Label2.text = ""
+	$LineEdit.text = ""
+	$LineEdit2.text = ""
+	$Label.text = ""
+
+
+func _on_button_8_pressed():
+	get_tree().quit()

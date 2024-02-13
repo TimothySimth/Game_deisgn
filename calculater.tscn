@@ -59,6 +59,22 @@ offset_right = 520.0
 offset_bottom = 96.0
 text = "Mod"
 
+[node name="Button7" type="Button" parent="."]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 128.0
+offset_right = 512.0
+offset_bottom = 192.0
+text = "Clear"
+
+[node name="Button8" type="Button" parent="."]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 192.0
+offset_right = 512.0
+offset_bottom = 256.0
+text = "Exit"
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -66,6 +82,24 @@ offset_left = 136.0
 offset_top = 48.0
 offset_right = 200.0
 offset_bottom = 88.0
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 124.0
+offset_bottom = 48.0
+text = "Enter num:"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 8.0
+offset_top = 88.0
+offset_right = 128.0
+offset_bottom = 120.0
+text = "Enter 2nd num:"
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 1
@@ -95,3 +129,5 @@ offset_bottom = 119.0
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
 [connection signal="pressed" from="Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="Button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="Button8" to="." method="_on_button_8_pressed"]

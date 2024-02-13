@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0bjv8q1lcho6"]
+
+[ext_resource type="Script" path="res://scoreboard.gd" id="1_0a33d"]
+
+[node name="scoreboard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0a33d")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_top = 256.0
+offset_right = 256.0
+offset_bottom = 320.0
+text = "Update"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 256.0
+offset_right = 512.0
+offset_bottom = 320.0
+text = "Clear"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 320.0
+offset_right = 320.0
+offset_bottom = 384.0
+text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 192.0
+offset_bottom = 26.0
+text = "Modify points (add/sub):"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_top = 24.0
+offset_right = 568.0
+offset_bottom = 248.0
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_right = 376.0
+offset_bottom = 31.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
