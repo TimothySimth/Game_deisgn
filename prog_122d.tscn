@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://didfbnnrblh7x"]
+
+[ext_resource type="Script" path="res://prog122d.gd" id="1_u3jvy"]
+
+[node name="prog122d" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u3jvy")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_top = 192.0
+offset_right = 320.0
+offset_bottom = 320.0
+text = "Show"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 320.0
+offset_right = 448.0
+offset_bottom = 320.0
+text = "Clear"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_right = 576.0
+offset_bottom = 320.0
+text = "Exit"
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 192.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
