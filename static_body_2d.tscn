@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://caymbatrumcbs"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_6nabc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bafqw"]
+size = Vector2(1279.5, 45)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2(431, 618)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(259.75, 1.99988)
+scale = Vector2(1266.5, 43.5)
+texture = SubResource("PlaceholderTexture2D_6nabc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(262.25, -2)
+shape = SubResource("RectangleShape2D_bafqw")

@@ -1,0 +1,105 @@
+[gd_scene load_steps=4 format=3 uid="uid://o8jsvx1fnak6"]
+
+[ext_resource type="PackedScene" uid="uid://caymbatrumcbs" path="res://static_body_2d.tscn" id="1_61j00"]
+[ext_resource type="Script" path="res://phys_demo.gd" id="1_bb74k"]
+[ext_resource type="PackedScene" uid="uid://bysw7nmirr7dx" path="res://phys_ball.tscn" id="1_wldc1"]
+
+[node name="phys_demo" type="Node2D"]
+script = ExtResource("1_bb74k")
+
+[node name="StaticBody2D6" parent="." instance=ExtResource("1_61j00")]
+position = Vector2(352, 751)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("1_61j00")]
+position = Vector2(377, 671)
+
+[node name="phys_ball" parent="." instance=ExtResource("1_wldc1")]
+position = Vector2(788, 249)
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 540.0
+offset_bottom = 205.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 205.0
+offset_bottom = 78.0
+text = "Gravity:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Grav_slider" type="HSlider" parent="Panel"]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 9.0
+offset_right = 516.0
+offset_bottom = 62.0
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 71.0
+offset_right = 532.0
+offset_bottom = 152.0
+text = "Apply Force"
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("1_61j00")]
+position = Vector2(1177, 731)
+rotation = -1.57369
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("1_61j00")]
+position = Vector2(-26, 284)
+rotation = 1.56834
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("1_61j00")]
+position = Vector2(841, -27.0002)
+rotation = 3.13539
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("1_61j00")]
+position = Vector2(342, 710)
+
+[node name="StaticBody2D7" parent="." instance=ExtResource("1_61j00")]
+position = Vector2(358, 802)
+
+[node name="StaticBody2D8" parent="." instance=ExtResource("1_61j00")]
+position = Vector2(-70, 287)
+rotation = 1.56834
+
+[node name="StaticBody2D9" parent="." instance=ExtResource("1_61j00")]
+position = Vector2(-112, 284)
+rotation = 1.56834
+
+[node name="StaticBody2D10" parent="." instance=ExtResource("1_61j00")]
+position = Vector2(-147, 281)
+rotation = 1.56834
+
+[node name="StaticBody2D11" parent="." instance=ExtResource("1_61j00")]
+position = Vector2(844, -65)
+rotation = 3.13539
+
+[node name="StaticBody2D12" parent="." instance=ExtResource("1_61j00")]
+position = Vector2(844, -97)
+rotation = 3.13539
+
+[node name="StaticBody2D13" parent="." instance=ExtResource("1_61j00")]
+position = Vector2(831, -129)
+rotation = 3.13539
+
+[node name="StaticBody2D14" parent="." instance=ExtResource("1_61j00")]
+position = Vector2(1929.57, -435.165)
+rotation = 3.13581
+
+[node name="StaticBody2D15" parent="." instance=ExtResource("1_61j00")]
+position = Vector2(1225, 731)
+rotation = -1.57369
+
+[node name="StaticBody2D16" parent="." instance=ExtResource("1_61j00")]
+position = Vector2(1269, 731)
+rotation = -1.57369
+
+[node name="StaticBody2D17" parent="." instance=ExtResource("1_61j00")]
+position = Vector2(1310, 728)
+rotation = -1.57369
+
+[connection signal="value_changed" from="Panel/Grav_slider" to="." method="_on_grav_slider_value_changed"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

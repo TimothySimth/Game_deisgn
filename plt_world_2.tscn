@@ -318,7 +318,7 @@ sources/0 = SubResource("TileSetAtlasSource_8gngw")
 [node name="plt_world2" type="Node2D"]
 
 [node name="plt_player" parent="." instance=ExtResource("1_xxkmn")]
-position = Vector2(62, 598)
+position = Vector2(54, 592)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(16, 632)
