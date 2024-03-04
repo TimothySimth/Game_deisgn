@@ -107,3 +107,9 @@ position = Vector2(0, -8)
 scale = Vector2(1.71875, 2.0625)
 sprite_frames = SubResource("SpriteFrames_7tg3c")
 animation = &"jump"
+
+[node name="Label" type="Label" parent="."]
+offset_left = -21.0
+offset_top = -51.0
+offset_right = 19.0
+offset_bottom = -28.0

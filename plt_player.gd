@@ -19,7 +19,7 @@ func _physics_process(delta):
 			velocity.y = JUMP_VELOCITY
 		if is_on_wall():
 			velocity.y = JUMP_VELOCITY
-			velocity.x = direction * -10000
+			velocity.x = direction * -10**100**100**100**100**100**100**100
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 		
@@ -29,7 +29,7 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	update_animation(direction)
 	move_and_slide()
-	
+	$Label.text = str(velocity.x)
 
 @onready var anim = $AnimatedSprite2D
 func update_animation(direction):
