@@ -93,7 +93,7 @@ offset_bottom = 381.0
 scale = Vector2(1.61584, 1.56456)
 text = "Exit"
 
-[connection signal="pressed" from="btncalc" to="." method="_on_btn_calc_pressed"]
 [connection signal="pressed" from="btncalc" to="." method="_on_btncalc_pressed"]
+[connection signal="pressed" from="btncalc" to="." method="_on_btn_calc_pressed"]
 [connection signal="pressed" from="btnclear" to="." method="_on_btnclear_pressed"]
 [connection signal="pressed" from="btnexit" to="." method="_on_btnexit_pressed"]

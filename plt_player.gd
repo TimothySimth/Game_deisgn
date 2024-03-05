@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+var health = 100
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -19,7 +19,7 @@ func _physics_process(delta):
 			velocity.y = JUMP_VELOCITY
 		if is_on_wall():
 			velocity.y = JUMP_VELOCITY
-			velocity.x = direction * -10**100**100**100**100**100**100**100
+			#velocity.x = direction * -10000
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 		
@@ -29,8 +29,7 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	update_animation(direction)
 	move_and_slide()
-	$Label.text = str(velocity.x)
-
+	$Label.text = str(health)
 @onready var anim = $AnimatedSprite2D
 func update_animation(direction):
 	if not is_on_floor():
@@ -41,23 +40,5 @@ func update_animation(direction):
 	else:
 		anim.play("default")
 		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+func _on_plt_enemy_damage(value):
+	health -= value

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bl5rfih0n2p4d"]
+
+[ext_resource type="Script" path="res://funtimes.gd" id="1_7hopx"]
+[ext_resource type="PackedScene" uid="uid://cr0i0t5jx7olg" path="res://plt_player.tscn" id="2_py71o"]
+[ext_resource type="PackedScene" uid="uid://bysw7nmirr7dx" path="res://phys_ball.tscn" id="3_b103x"]
+
+[node name="funtimes" type="Node2D"]
+script = ExtResource("1_7hopx")
+
+[node name="plt_player" parent="." instance=ExtResource("2_py71o")]
+
+[node name="world" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="world"]
+polygon = PackedVector2Array(-5, 169, 772, 167, 1158, 3, 1542, 1, 1882, 205, 1886, 365, 2071, 374, 2068, 196, 2241, 190, 2241, 463, 2, 401)
+
+[node name="Polygon2D" type="Polygon2D" parent="world/CollisionPolygon2D"]
+
+[node name="phys_ball" parent="world" instance=ExtResource("3_b103x")]
+position = Vector2(505, 7)

@@ -1,10 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://cfewd6056ciw8"]
+[gd_scene load_steps=12 format=3 uid="uid://cfewd6056ciw8"]
 
 [ext_resource type="Script" path="res://plt_world1.gd" id="1_lwomm"]
 [ext_resource type="Texture2D" uid="uid://cb6j85yhvfl0a" path="res://icon.svg" id="2_1to78"]
 [ext_resource type="PackedScene" uid="uid://cr0i0t5jx7olg" path="res://plt_player.tscn" id="2_bsria"]
 [ext_resource type="Script" path="res://plt_enemy.gd" id="4_htoe2"]
-[ext_resource type="PackedScene" uid="uid://bdct7i0ypwxng" path="res://draggable.tscn" id="5_8rs47"]
+[ext_resource type="Script" path="res://RigidBody2D.gd" id="5_c2bhe"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_tcgcv"]
 b = Vector2(88, 0)
@@ -18,6 +18,9 @@ size = Vector2(90.5, 101)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x0bgm"]
 size = Vector2(1024, 1024)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6dx5"]
+size = Vector2(40, 38)
 
 [node name="plt_world1" type="Node2D"]
 script = ExtResource("1_lwomm")
@@ -60,11 +63,8 @@ position = Vector2(1.49998, -0.499983)
 scale = Vector2(97, 103)
 texture = SubResource("PlaceholderTexture2D_7c57c")
 
-[node name="draggable" parent="." instance=ExtResource("5_8rs47")]
-script = null
-
 [node name="plt_enemy" type="RigidBody2D" parent="."]
-position = Vector2(838, 679)
+position = Vector2(846, 526)
 max_contacts_reported = 1
 contact_monitor = true
 script = ExtResource("4_htoe2")
@@ -80,6 +80,32 @@ texture = ExtResource("2_1to78")
 
 [node name="Timer" type="Timer" parent="plt_enemy"]
 
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(633, 128)
+freeze = true
+script = ExtResource("5_c2bhe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(10, -9)
+shape = SubResource("RectangleShape2D_n6dx5")
+
+[node name="ColorRect" type="ColorRect" parent="RigidBody2D/CollisionShape2D"]
+offset_left = -20.0
+offset_top = -19.0
+offset_right = 20.0
+offset_bottom = 21.0
+color = Color(0.294118, 1, 1, 1)
+
+[node name="Button" type="Button" parent="RigidBody2D"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -10.0
+offset_top = -28.0
+offset_right = 30.0
+offset_bottom = 12.0
+
 [connection signal="mouse_entered" from="interact" to="." method="_on_interact_mouse_entered"]
 [connection signal="body_entered" from="plt_enemy" to="plt_enemy" method="_on_body_entered"]
+[connection signal="damage" from="plt_enemy" to="plt_player" method="_on_plt_enemy_damage"]
 [connection signal="timeout" from="plt_enemy/Timer" to="plt_enemy" method="_on_timer_timeout"]
+[connection signal="button_down" from="RigidBody2D/Button" to="RigidBody2D" method="_on_button_button_down"]
+[connection signal="button_up" from="RigidBody2D/Button" to="RigidBody2D" method="_on_button_button_up"]

@@ -31,3 +31,6 @@ metadata/_edit_use_anchors_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_pp0cw")
+
+[connection signal="button_down" from="ColorRect/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="ColorRect/Button" to="." method="_on_button_button_up"]
