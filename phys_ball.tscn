@@ -8,20 +8,22 @@ bounce = 1.0
 radius = 50.0
 height = 100.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n50xh"]
-radius = 42.9026
-height = 90.2434
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_afbcv"]
+radius = 34.726
+height = 84.3237
 
 [node name="phys_ball" type="RigidBody2D"]
 position = Vector2(158, 154)
 physics_material_override = SubResource("PhysicsMaterial_d5bag")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-position = Vector2(-17, 3)
-scale = Vector2(1.38157, 1.22)
+position = Vector2(-17.7344, 1.98157)
+rotation = -2.37259
+scale = Vector2(1.16641, 1.16094)
 mesh = SubResource("SphereMesh_emkip")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-18, 2)
+rotation = 1.70341
 scale = Vector2(1.60419, 1.3519)
-shape = SubResource("CapsuleShape2D_n50xh")
+shape = SubResource("CapsuleShape2D_afbcv")

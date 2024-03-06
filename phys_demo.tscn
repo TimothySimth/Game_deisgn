@@ -7,9 +7,6 @@
 [node name="phys_demo" type="Node2D"]
 script = ExtResource("1_bb74k")
 
-[node name="StaticBody2D6" parent="." instance=ExtResource("1_61j00")]
-position = Vector2(352, 751)
-
 [node name="StaticBody2D" parent="." instance=ExtResource("1_61j00")]
 position = Vector2(377, 671)
 
@@ -18,7 +15,7 @@ position = Vector2(788, 249)
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 540.0
-offset_bottom = 205.0
+offset_bottom = 309.0
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
@@ -43,63 +40,53 @@ offset_right = 532.0
 offset_bottom = 152.0
 text = "Apply Force"
 
-[node name="StaticBody2D2" parent="." instance=ExtResource("1_61j00")]
-position = Vector2(1177, 731)
-rotation = -1.57369
+[node name="Button2" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 222.0
+offset_right = 531.0
+offset_bottom = 303.0
+text = "Apply Adjustments
+"
 
-[node name="StaticBody2D3" parent="." instance=ExtResource("1_61j00")]
-position = Vector2(-26, 284)
-rotation = 1.56834
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 162.0
+offset_right = 105.0
+offset_bottom = 188.0
+text = "Inertia
+"
 
-[node name="StaticBody2D4" parent="." instance=ExtResource("1_61j00")]
-position = Vector2(841, -27.0002)
-rotation = 3.13539
+[node name="Label3" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 186.0
+offset_right = 139.0
+offset_bottom = 215.0
+text = "Velocity (x, y):"
 
-[node name="StaticBody2D5" parent="." instance=ExtResource("1_61j00")]
-position = Vector2(342, 710)
+[node name="TextEdit" type="TextEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 156.0
+offset_right = 523.0
+offset_bottom = 184.0
 
-[node name="StaticBody2D7" parent="." instance=ExtResource("1_61j00")]
-position = Vector2(358, 802)
+[node name="TextEdit2" type="TextEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 189.0
+offset_right = 324.0
+offset_bottom = 217.0
 
-[node name="StaticBody2D8" parent="." instance=ExtResource("1_61j00")]
-position = Vector2(-70, 287)
-rotation = 1.56834
-
-[node name="StaticBody2D9" parent="." instance=ExtResource("1_61j00")]
-position = Vector2(-112, 284)
-rotation = 1.56834
-
-[node name="StaticBody2D10" parent="." instance=ExtResource("1_61j00")]
-position = Vector2(-147, 281)
-rotation = 1.56834
-
-[node name="StaticBody2D11" parent="." instance=ExtResource("1_61j00")]
-position = Vector2(844, -65)
-rotation = 3.13539
-
-[node name="StaticBody2D12" parent="." instance=ExtResource("1_61j00")]
-position = Vector2(844, -97)
-rotation = 3.13539
-
-[node name="StaticBody2D13" parent="." instance=ExtResource("1_61j00")]
-position = Vector2(831, -129)
-rotation = 3.13539
-
-[node name="StaticBody2D14" parent="." instance=ExtResource("1_61j00")]
-position = Vector2(1929.57, -435.165)
-rotation = 3.13581
-
-[node name="StaticBody2D15" parent="." instance=ExtResource("1_61j00")]
-position = Vector2(1225, 731)
-rotation = -1.57369
-
-[node name="StaticBody2D16" parent="." instance=ExtResource("1_61j00")]
-position = Vector2(1269, 731)
-rotation = -1.57369
-
-[node name="StaticBody2D17" parent="." instance=ExtResource("1_61j00")]
-position = Vector2(1310, 728)
-rotation = -1.57369
+[node name="TextEdit3" type="TextEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 189.0
+offset_right = 522.0
+offset_bottom = 217.0
 
 [connection signal="value_changed" from="Panel/Grav_slider" to="." method="_on_grav_slider_value_changed"]
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]

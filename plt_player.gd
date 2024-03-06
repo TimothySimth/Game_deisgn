@@ -19,7 +19,7 @@ func _physics_process(delta):
 			velocity.y = JUMP_VELOCITY
 		if is_on_wall():
 			velocity.y = JUMP_VELOCITY
-			#velocity.x = direction * -10000
+			velocity.x = direction * -19999
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 		
