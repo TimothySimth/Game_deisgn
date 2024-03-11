@@ -10,7 +10,7 @@ func _process(delta):
 
 func _on_button_button_down():
 	dragging = true
-	offset = get_global_mouse_position() - $draggable.global_position
+	doffset = get_global_mouse_position() - $draggable.global_position
 
 func _on_button_button_up():
 	dragging = false

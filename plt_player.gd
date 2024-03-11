@@ -8,7 +8,18 @@ const JUMP_VELOCITY = -400.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
+var menu_scene = preload("res://my_gui.tscn")
+var menu_instance = null
+
+func _ready():
+	menu_instance = menu_scene.instantiate()
+	$Camera2D.add_child.call_deferred(menu_instance)
+	menu_instance.hide()
+
 func _physics_process(delta):
+	if Input.is_action_just_pressed("ui_cancel"):
+		menu_instance.show()
+		get_tree().paused = true
 	var direction = Input.get_axis("a", "d")# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
