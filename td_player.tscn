@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=3 uid="uid://b2swyjnno36ma"]
+
+[ext_resource type="Script" path="res://td_player.gd" id="1_8k8oq"]
+[ext_resource type="Texture2D" uid="uid://bi5q7xxx5idsh" path="res://assets/sprites/zelda_like/zelda_like/character.png" id="2_1d6nm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydjvk"]
+atlas = ExtResource("2_1d6nm")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ctil"]
+atlas = ExtResource("2_1d6nm")
+region = Rect2(0, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7yjx"]
+atlas = ExtResource("2_1d6nm")
+region = Rect2(0, 64, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g7sl4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydjvk")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ctil")
+}],
+"loop": true,
+"name": &"idle_side",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d7yjx")
+}],
+"loop": true,
+"name": &"idle_up",
+"speed": 5.0
+}]
+
+[node name="td_player" type="CharacterBody2D"]
+position = Vector2(223, 106)
+script = ExtResource("1_8k8oq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-6, -1, -6, 1, -5, 1, -5, 2, -6, 2, -6, 4, -7, 4, -7, 6, -6, 6, -6, 7, -4, 7, -4, 9, -3, 9, -3, 10, -1, 10, -1, 9, 1, 9, 1, 10, 3, 10, 3, 9, 4, 9, 4, 7, 6, 7, 6, 6, 7, 6, 7, 4, 6, 4, 6, 2, 5, 2, 5, 1, 6, 1, 6, -1, 7, -1, 7, -3, 8, -3, 8, -5, 7, -5, 7, -6, 6, -6, 6, -7, 7, -7, 7, -8, 6, -8, 6, -9, 3, -9, 3, -10, 1, -10, 1, -9, -3, -9, -3, -8, -5, -8, -5, -7, -6, -7, -6, -5, -7, -5, -7, -1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_g7sl4")
+animation = &"idle_down"
