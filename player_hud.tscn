@@ -20,3 +20,19 @@ texture = ExtResource("2_cu7ot")
 hframes = 33
 vframes = 20
 frame = 8
+
+[node name="PlayerCoin" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -5.0
+offset_top = 541.0
+offset_right = 330.0
+offset_bottom = 648.0
+
+[node name="Coin" type="Sprite2D" parent="PlayerCoin"]
+position = Vector2(54.6016, 61.7875)
+scale = Vector2(5.45864, 5.47344)
+texture = ExtResource("2_cu7ot")
+hframes = 30
+vframes = 20
+frame = 120
